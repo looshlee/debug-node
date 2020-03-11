@@ -4,13 +4,15 @@ on: [watch]
 jobs:
   build: # make sure build/ci work properly
     runs-on: ubuntu-latest
+    env:
+      JUSTIN: TRUDEAU 
     steps:
     - uses: actions/checkout@v1
     - run: | 
         echo "::set-env name={JUSTIN}::{bieber}"
-        echo JUSTIN
+        echo $JUSTIN
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: echo JUSTIN
+    - run: echo $JUSTIN
