@@ -14,8 +14,11 @@ jobs:
         b=20
         echo $b
         echo $(($a + $b == 32))
-#   test: # make sure the action works on a clean machine without building
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v1
-#     - run: echo $JUSTIN
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: |
+        echo "::debug file=app.js,line=1::Entered octocatAddition method"
+        npm instal
+        npm blah
