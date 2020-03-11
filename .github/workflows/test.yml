@@ -6,10 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: |
-        echo "::set-env name=action_state::yellow"
+    - run: ::set-env name={justin}::{bieber}
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: echo action_state is a color
+    - run: echo $justin is a color
