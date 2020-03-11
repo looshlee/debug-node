@@ -21,3 +21,4 @@ jobs:
     - run: |
         npm instal
         npm blah
+        echo "::error file=app.js,line=10,col=15::Something went wrong"
