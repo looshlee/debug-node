@@ -19,6 +19,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: |
-        echo "::debug file=app.js,line=1::Entered octocatAddition method"
         npm instal
         npm blah
